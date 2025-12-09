@@ -18,4 +18,4 @@ c = float(input("Digite o 3º número: "))
 
 resultado = maior_numero(a, b, c)
 
-print(f"O maior do entre A, B e C é: {resultado}")
+print(f"O maior número entre A, B e C é: {resultado}")
