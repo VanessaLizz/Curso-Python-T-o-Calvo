@@ -21,7 +21,7 @@ if conexao.is_connected():
     match menu:
       case '1':
         print("CADASTRO DE POKEMONS")
-        nome = input("Digite o nome do novo pokemon: ")
+        nome = input("Digite o nome do pokemon que deseja cadastrar: ")
         tipo = input("Digite o tipo do novo pokemon: ")
         abinha = conexao.cursor(dictionary=True)
         abinha.execute(f"""
@@ -65,7 +65,7 @@ if conexao.is_connected():
                   novo_nome = input("Digite o novo nome do pokemon: ")
                   abinha.execute(f"UPDATE pokemons SET nome = '{novo_nome}' WHERE id = {id_editado}")
                   conexao.commit()
-                  print("Nome do pokemon atualizado com sucesso.")
+                  print("Nome do pokemon atualizado com sucesso!")
                 case '2':
                   novo_tipo = input("Digite o novo tipo do pokemon: ")
                   abinha.execute(f"UPDATE pokemons SET tipo = '{novo_tipo}' WHERE id = {id_editado}")
